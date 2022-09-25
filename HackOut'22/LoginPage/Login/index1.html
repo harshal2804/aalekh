@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+        <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="form.js"></script>
+    </head>
+    <body>
+        <div class="v100_277">
+            <div class="v104_24">
+
+            </div>
+            <span class="v100_278">Enter Details Below</span>
+            <div class="v100_281">
+                <div class="v100_279">
+
+                </div>
+                <input type="email" class="v100_279" id="email">Email
+            </div>
+            <div class="v100_282">
+                <div class="v100_283">
+
+                </div>
+                <input type="password" class="v100_283" id="password">Password
+            </div>
+            <div class="v100_287">
+                <div class="v100_285">
+
+                </div>
+                <a href="../../ShoppingPage/shoppingindex.html" class="home">
+                <button onclick="signIn()" id="signIp">
+                <span class="v100_286">Login</span>
+                </button></a>
+            </div><div class="v100_288">
+            <div class="v100_289">
+
+            </div>
+            <a href="../../ShoppingPage/shoppingindex.html" class="home">
+            <button onclick="signUp()" id="signUp">
+            <span class="v100_290">Sign Up</span>
+            </button></a>
+        </div>
+        <div class="v100_291">
+            <div class="v100_292">
+
+            </div>
+            <button onclick="signOut()" id="signOut">
+            <span class="v100_293">Sign Out</span>
+            </button>
+        </div>
+        </div>
+    </body>
+</html>
+<br/><br/> 
+<style>* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+  .v100_277 {
+    width: 100%;
+    height: 1024px;
+    background: rgba(207,195,163,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v104_24 {
+    width: 592px;
+    height: 587px;
+    background: rgba(207,195,163,1);
+    opacity: 1;
+    position: absolute;
+    top: 219px;
+    left: 424px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.25), inset 16px 16px 15px rgba(255, 255, 255, 0.25), inset -16px -16px 15px rgba(0, 0, 0, 0.25);
+  }
+  .v100_278 {
+    width: 400px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 261px;
+    left: 554px;
+    font-family: Montserrat;
+    font-weight: Bold;
+    font-size: 32px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v100_281 {
+    width: 480px;
+    height: 79px;
+    background: url("../images/v100_281.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 362px;
+    left: 480px;
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  .v100_279 {
+    width: 480px;
+    height: 79px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v100_280 {
+    width: 94px;
+    color: rgba(105,105,105,1);
+    position: absolute;
+    top: 20px;
+    left: 27px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 32px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v100_282 {
+    width: 480px;
+    height: 79px;
+    background: url("../images/v100_282.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 473px;
+    left: 480px;
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  .v100_283 {
+    width: 480px;
+    height: 79px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  .v100_284 {
+    width: 160px;
+    color: rgba(105,105,105,1);
+    position: absolute;
+    top: 20px;
+    left: 27px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 32px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v100_287 {
+    width: 270px;
+    height: 56px;
+    background: url("../images/v100_287.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 593px;
+    left: 585px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  .v100_285 {
+    width: 270px;
+    height: 56px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+  }
+  .v100_286 {
+    width: 71px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 14px;
+    left: 100px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v100_288 {
+    width: 168px;
+    height: 56px;
+    background: url("../images/v100_288.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 690px;
+    left: 531px;
+    overflow: hidden;
+  }
+  .v100_289 {
+    width: 168px;
+    height: 56px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+  }
+  .v100_290 {
+    width: 98px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 13px;
+    left: 35px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v100_291 {
+    width: 168px;
+    height: 56px;
+    background: url("../images/v100_291.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 690px;
+    left: 733px;
+    overflow: hidden;
+  }
+  .v100_292 {
+    width: 168px;
+    height: 56px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+  }
+  .v100_293 {
+    width: 109px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 13px;
+    left: 30px;
+    font-family: Montserrat;
+    font-weight: SemiBold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+  }
+  </style>

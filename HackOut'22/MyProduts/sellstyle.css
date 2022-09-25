@@ -1,0 +1,206 @@
+body {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+
+  background: #cfc3a3;
+}
+.header {
+  position: absolute;
+  width: 1405px;
+  height: 66px;
+  left: 9px;
+  top: 0px;
+}
+
+.logo {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 108px;
+  height: 50px;
+  left: 9px;
+  top: 8px;
+
+  background: url(Logo);
+}
+.home {
+  position: absolute;
+  left: 150px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.sell {
+  position: absolute;
+  left: 262px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.about {
+  position: absolute;
+  left: 350px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.links {
+  position: absolute;
+  width: 151px;
+  height: 65px;
+
+  top: 0px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+/* .explore{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: all 0.3s ease-out;
+} */
+
+.bod {
+  position: absolute;
+  width: 320px;
+  height: 59px;
+  left: 117px;
+  top: 109px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: #000000;
+}
+
+.prod1 {
+  position: absolute;
+  height: 472px;
+  left: 117px;
+  width: 258px;
+  /* right: 1065px; */
+  top: 100px;
+  background-color: #ffffff;
+}
+
+.prod2 {
+  position: absolute;
+  height: 472px;
+  left: 402px;
+  width: 258px;
+  /* right: 780px; */
+  top: 0px;
+  background-color: #ffffff;
+}
+
+.img1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: 10px;
+}
+
+.desprod {
+  position: absolute;
+  left: 16px;
+  width: 180px;
+  top: 250px;
+
+  /* Inter / Body Default */
+
+  font-family: "Inter";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+  /* or 24px */
+
+  letter-spacing: 0.0275em;
+}
+
+.priceprod1 {
+  position: absolute;
+  height: 36px;
+  left: 16px;
+  right: 16px;
+  bottom: 106px;
+
+  /* Inter / 24 sp • H5 */
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  display: flex;
+  align-items: center;
+
+  /* Dark Color */
+
+  color: rgba(0, 0, 0, 0.87);
+}
+.offprod1 {
+  position: absolute;
+  width: 70px;
+  height: 24px;
+  right: -241px;
+  bottom: 98px;
+}
+
+.prod2 {
+  position: absolute;
+  height: 472px;
+  left: 402px;
+  right: 780px;
+  top: 184px;
+}
+
+.addprod {
+  position: absolute;
+  width: 360px;
+  height: 59px;
+  left: -7px;
+  top: 681px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: #000000;
+}
+
+.add {
+  color: black;
+  font-style: normal;
+  text-decoration: none;
+}
